@@ -1,0 +1,53 @@
+.botton-eventos{
+    background-color: rgba(0, 0, 0, 0.87);
+    border:transparent;
+    color: rgba(255, 255, 255, 0.93);
+    font-size: 20px;
+    height: 40px;
+    width: 40px;
+    border: 1px solid rgba(0, 0, 0, 0.86);
+}
+.botton-eventos:focus{ 
+    outline:none;
+} 
+.botton-eventos:hover{ 
+    background-color: black;
+}
+.img-slide-eventos{ 
+    display: block;
+    height: 390px;
+    margin: 0px auto 0px auto;
+    text-align: center;
+    width: 100%;
+    } 
+.contenedor-evento{ 
+        border: 3px solid white;
+        margin: 0px auto;
+        width: 96%;
+        padding: 1%;
+        display: none;
+} 
+#slide-eventos{ 
+    float: left;
+    background-color: rgb(00,63,37);
+    border: 2px solid rgb(00,63,37);
+    color: white;
+    margin: 0px auto;
+    padding-bottom: 5px;
+    padding-top: 1%;
+    width: 96%;
+    } 
+    #contenedor-botones-eventos{
+        float: right;
+        right: 4%;
+        height: 0px;
+        position: relative;
+        top:20px;
+    }
+    #evento-contenido{
+        width: 99%;
+        padding: 0.5%;
+    }
+.contenedor-h2{
+    float: left;
+}

@@ -1,0 +1,48 @@
+#calendario-salon{ 
+display: block;
+margin: 0px auto 0px auto;
+width: 90%;
+} 
+#contenedor-botones-aside{ 
+left: 90%;
+position: relative;
+top: -40px;
+} 
+#descripcion{ 
+color: black;
+font-size: 16px;
+font-weight: bold;
+margin: 40px auto;
+width: 90%;
+} 
+#lista-opcionales{ 
+margin:0px;
+} 
+#slider{ 
+margin: 0px auto 0px auto;
+width:90%;
+} 
+#slider img{ 
+height: 350px;
+width: 100%;
+} 
+.boton-slider{ 
+background-color: black;
+border:transparent;
+color: white;
+height: 30px;
+width: 30px;
+} 
+.boton-slider:focus{ 
+outline:none;
+} 
+.boton-slider:hover{ 
+background-color: grey;
+} 
+.contacto input[name="asunto"]{ 
+font-weight: bold;
+} 
+.mySlides{ 
+height: 350px;
+width: 100%;
+} 

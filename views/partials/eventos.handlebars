@@ -1,0 +1,12 @@
+<h2 class="contenedor-h2">Eventos:</h2>
+<div id="slide-eventos">
+        <div id="contenedor-botones-eventos">
+            <button  class="botton-eventos" onclick="pasarEvento(-1)">&#10094;</button>
+            <button  class="botton-eventos" onclick="pasarEvento(1)">&#10095;</button>
+        </div> 
+        {{#each listaImgEventos}}
+            <div class="contenedor-evento">
+                <img src={{this}} alt="" class="img-slide-eventos"/>
+            </div>
+        {{/each}}
+</div>

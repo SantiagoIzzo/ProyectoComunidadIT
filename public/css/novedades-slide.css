@@ -1,0 +1,46 @@
+#novedades-slide{
+    float: left;
+    background-color: rgb(00,63,37);
+    border: 2px solid rgb(00,63,37);
+    color: white;
+    margin: 0px auto;
+    padding-bottom: 5px;
+    padding-top :1%;
+    width: 96%;
+}
+.contenedor-img-novedades{
+    border: 3px solid white;
+    margin: 0px auto;
+    width: 96%;
+    padding: 1%;
+    display: none;
+}
+.contenedor-img-novedades>img{
+    display: block;
+    margin: 0px auto 0px auto;
+    text-align: center;
+    width: 100%;
+    height: 315px;
+}
+#contenedor-botones-novedades{
+    float: right;
+    right: 4%;
+    height: 0px;
+    position: relative;
+    top: 20px;
+}
+#contenedor-botones-novedades>button{
+    background-color: rgba(0, 0, 0, 0.87);
+    border:transparent;
+    color: rgba(255, 255, 255, 0.93);
+    font-size: 20px;
+    height: 40px;
+    width: 40px;
+    border: 1px solid rgba(0, 0, 0, 0.86);
+}
+#contenedor-botones-novedades>button:focus{ 
+    outline:none;
+} 
+#contenedor-botones-novedades>button:hover{ 
+    background-color: black;
+}

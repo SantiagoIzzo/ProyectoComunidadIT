@@ -1,0 +1,12 @@
+<h2 class="contenedor-h2 izquierda">Más Novedades:</h2>
+<div id="novedades-slide">
+    <div id="contenedor-botones-novedades">
+        <button onclick="pasarNovedad(-1)">&#10094;</button>
+        <button onclick="pasarNovedad(1)">&#10095;</button>
+        </div>
+    {{#each listaImgNovedades}}
+        <div class="contenedor-img-novedades">
+            <img class="img-novedades" src={{this}} alt="">
+        </div>
+    {{/each}}
+</div>

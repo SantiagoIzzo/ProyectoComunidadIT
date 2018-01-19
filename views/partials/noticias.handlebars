@@ -1,0 +1,16 @@
+
+<div id="contenedor-noticias">
+    {{#each noticias}}
+    <div id="noticia1" class="noticia">
+        <img class="img-noticia" src={{this.img}} alt="Expo"/>
+        <div class="contenido">
+            <h2>{{this.titulo}}</h2>
+            <h3>{{this.fecha}}</h3>
+            <p>
+                {{this.contenido}}
+                {{!-- <span class="leer-mas"><a href="noticia1.html">Leer mas</a></span> --}}
+            </p>
+        </div>
+    </div>
+    {{/each}}
+</div>

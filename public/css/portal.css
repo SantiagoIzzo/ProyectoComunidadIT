@@ -1,0 +1,51 @@
+#contenedor-img-form{ 
+margin: 0px auto;
+width: 40%;
+} 
+#contenedor-img-form img{ 
+width: 100%;
+} 
+.form-login{ 
+background-color: white;
+border-radius: 6px;
+border: 1px solid #CED5D7;
+box-shadow: 0px 5px 10px #B5C1C5, 0 0 0 10px rgb(27,79,33) inset;
+margin: 40px auto 0px auto;
+padding:30px 0px;
+width: 50%;
+} 
+.form-login a{ 
+color: rgb(27,79,33);
+font-weight: bold;
+text-decoration-line: none;
+} 
+.form-login input[type='submit']{ 
+background-color: white;
+color: rgb(27,79,33);
+display: block;
+margin:30px auto 0px auto;
+} 
+.form-login input[type='text'],input[type='password'], input[type='submit']{ 
+border: 1px solid #CED5D7;
+box-shadow:0 0 0 3px rgb(27,79,33);
+display: block;
+font-size: 1em;
+margin: 0px auto 20px auto;
+padding: 7px 6px;
+width: 80%;
+} 
+.texto-chico{ 
+font-size: 16px;
+margin:8px auto 4px auto;
+text-align: left;
+width: 84.5%;
+} 
+.texto-grande{ 
+background-color: rgb(27,79,33);
+border-radius: 10px 10px;
+color: white;
+font-size: 35px;
+margin: 0px auto 25px auto;
+text-align: center;
+width: 60%;
+} 

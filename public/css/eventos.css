@@ -1,0 +1,29 @@
+
+#contenedor-eventos{
+    width: 93%;
+    margin: 0px auto;
+}
+.evento{
+    width: 46%;
+    margin: 0px 2% 50px 2%;
+    outline: 2px solid rgb(00,63,37);
+}
+.evento p{
+    margin: 0px 1% 5px 1%;
+}
+.evento h2{
+    margin: 0px 1% 5px 1%;
+}
+.evento h3{
+    margin: 0px 1% 5px 1%;
+}
+.evento img{
+    width: 100%;
+    height: 200px;
+}
+.flota-izquierda{
+    float: left;
+}
+.flota-derecha{
+    float: right;
+}

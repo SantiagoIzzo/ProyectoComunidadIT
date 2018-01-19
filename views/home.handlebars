@@ -1,0 +1,35 @@
+{{!-- <h2 class="contenedor-h2 ">Eventos:</h2> --}}
+{{!-- <h2 class="contenedor-h2 ">Eventos:</h2>
+<div id="slide-eventos">
+        <div id="contenedor-botones-eventos">
+            <button  class="botton-eventos" onclick="pasarEvento(-1)">&#10094;</button>
+            <button  class="botton-eventos" onclick="pasarEvento(1)">&#10095;</button>
+        </div> 
+        {{#each listaImgEventos}}
+            <div class="contenedor-evento">
+                <img src={{this}} alt="" class="img-slide-eventos"/>
+            </div>
+        {{/each}}
+</div> --}}
+{{>eventos}}
+<br/>
+<!-- agregar el boton o link ver mas noticias que lleve a la seccion de noticias -->
+<h2 class="contenedor-h2 ">Institucional:</h2>
+<div id="contenedor-noticias">
+    {{#each noticias}}
+    <div id="noticia1" class="noticia">
+        <img class="img-noticia" src={{this.img}} alt={{this.titulo}}/>
+        <div class="contenido">
+            <h2>{{this.titulo}}</h2>
+            <h3>{{this.fecha}}</h3>
+            <p>
+                {{this.contenido}}
+                {{!-- <span class="leer-mas"><a href="noticia1.html">Leer mas</a></span> --}}
+            </p>
+        </div>
+    </div>
+    {{/each}}  
+    <div class="ver-mas"><a href="/institucional">Ver mas noticias</a></div>                                                
+</div>
+                  
+            

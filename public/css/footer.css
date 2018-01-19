@@ -1,0 +1,31 @@
+#footer{
+    width: 100%;
+    height: 200px;
+    margin: 20px auto 0px auto;
+    background-color: black;
+    float: left;
+}
+#derechos{
+    width: 100%;
+    float: left;
+    text-align: center;
+    padding-top:20px;
+}
+.textogris{
+    color: grey;
+}
+
+#info-footer{
+    width: 100%;
+    height: 150px;
+    color:white;
+    text-align: center;
+    float: left;
+}
+#info-footer>div{
+    width: 33%;
+    float: left;
+    height: 50px;
+    display: inline-block;
+    margin-top:30px;
+}

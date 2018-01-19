@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link href="css/general.css" rel="stylesheet">
+        <link href="css/nav.css" rel="stylesheet">
+        <link href="css/fechas.css" rel="stylesheet"> 
+        <link href="css/novedades.css" rel="stylesheet"> 
+        <link href="css/footer.css" rel="stylesheet">         
+        <link href="css/novedades-slide.css" rel="stylesheet">                     
+        {{#each estilos}}
+            <link href={{this}} rel="stylesheet">
+        {{/each}}
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Sarpanch:900|Titillium+Web:900" rel="stylesheet">
+        <title>Club Deportivo Defensores de Hurlingham</title>
+    </head>
+    <body>
+        <div id="home" class="contenedor-general">
+                <div id="header">
+                    <div id="contenedor-logo-nombre">
+                            <img id="img-nav" src="img/img-nav/img-logo-solo.png" alt="Logo"/>
+                            <img id="img-nombre" src="img/img-nav/img-nombre.png" alt="Club Deportivo Defensores de Hurlingham"/>
+                   </div>
+                   {{!-- <div id="contenedor-redes-header">
+                            <a href=""><img src="img/img-redes/img-facebookcolor.png" alt="Facebook"></a>
+                            <a href=""><img src="img/img-redes/img-twittercolor.png" alt="Twitter"></a>
+                            <a href=""><img src="img/img-redes/img-instagramcolor.png" alt="Instagram"></a>
+                            <a href=""><img src="img/img-redes/img-youtubecolor.png" alt="Youtube"></a>
+
+                    </div>     --}}
+                </div>    
+                {{>nav}}
+                {{>novedades}}
+                <main>
+                    {{{body}}}
+                </main>
+                <div class="aside">
+                {{#if aside}}
+                    {{#if ubicacion}}
+                        {{>ubicacion}}
+                    {{/if}}
+                    {{> fechas}}
+                    {{> novedades-slide}}
+                    {{#if eventos}}
+                        {{> eventos}}
+                    {{/if}}
+                {{/if}}  
+                {{#if transportes}}
+                    {{> trasportes}}
+                {{/if}}    
+                </div>     
+                {{!-- <div class="aside">
+                    {{> fechas}}
+                    {{> novedades-slide}}
+                </div> --}}
+                {{>footer}}
+                    {{!-- {{>noticias}} --}}
+             
+        </div>
+        <script src="js/nav.js" async defer></script>                
+        <script src="js/fechas.js" async defer></script>                       
+        {{#each javascript}}
+            <script src={{this}} async defer></script>
+        {{/each}}
+    </body>
+</html>

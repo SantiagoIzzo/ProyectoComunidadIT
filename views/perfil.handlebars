@@ -1,0 +1,34 @@
+<div id="contenedor-principal">
+            <div id="contenedor-perfil">
+                <div class="estilo-datos">Nombre: {{nombre}} {{apellido}}</div>
+                <div class="estilo-datos">N° de Socio: {{numSocio}}</div>
+                <div class="estilo-datos">N° de Documento: {{numDocumento}}</div>
+                <div class="estilo-datos">Telefono: {{numTelefono}}</div>
+                <div class="estilo-datos">Grupo Familiar: {{grupoFamiliar}}</div>
+                <div class="estilo-datos">Deportes:</div>
+                    <ul class="lista">
+                        {{#each deportes}} 
+                            <li>{{this}}</li>
+                        {{/each}} 
+                    </ul> 
+                <div class="estilo-datos">Actividades:</div>
+                    <ul class=lista>
+                            {{#each actividades}} 
+                                <li>{{this}}</li>
+                            {{/each}}
+                    </ul>      
+                <div class="estilo-datos">Estado de Cuenta:<span class={{color}}>{{monto}}</span></div>
+                
+            </div>
+            <div id="contenedor-mensajes">
+                {{#each mensajes}}
+                <div class="barra-mensaje">
+                    <a class="boton borrar">Borrar</a>
+                    <a class="boton leer">Leer</a>
+                    <div class="disciplina">{{this.disciplina}}</div>
+                    <div class="asunto">{{this.asunto}}</div>
+                <div>
+                {{/each}}
+            </div>
+
+</div>

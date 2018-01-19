@@ -1,0 +1,18 @@
+<h1 class="titulo-principal-main">Eventos</h1>
+    {{!-- haceler una paginado --}}
+<div id="contenedor-eventos">
+    {{#each eventoscontenidos}}
+        <div class="evento {{this.flota}}">
+            <img src={{this.img}} alt="Expo"/>
+            <div class="contenido">
+                <h2>{{this.titulo}}</h2>
+                <h3>{{this.fecha}}</h3>
+                <p>
+                    {{this.contenido}}
+                </p>
+            </div>
+        </div>   
+    {{/each}}     
+</div>
+
+ 

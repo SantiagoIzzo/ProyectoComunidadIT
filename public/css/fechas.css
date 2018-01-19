@@ -1,0 +1,113 @@
+#borde-fechas{
+    width: 96%;
+    border:2px solid rgb(00,63,37);
+    float: left;
+    text-align: center;
+    margin-bottom: 10px;
+}
+#contenedor-fechas{
+    width: 100%;
+    float: left;
+    text-align: center;
+}
+.botonera{
+    width: 100%;
+    padding: 0px;
+    margin:0px 0px 0px 0px;
+    border:none;
+    float: left;
+    background-color:rgb(00,63,37);
+}
+.boton-fechas{
+    height: 35px;
+    width: 15%;
+    padding: 0px;
+    display: inline-block;
+    border:none;
+    color:white;
+    background-color: rgb(00,63,37);
+    font-size: 20px;
+}
+.boton-fechas:hover{
+    background-color:grey;
+    color:white;
+}
+.boton-fechas:focus{
+    outline: none;
+}
+#contenedor-deporte, #contenedor-categoria{
+    width: 70%;
+    background-color: rgb(00,63,37);
+    color:white;
+    display: inline-block;
+    margin:0px;
+    height: 25px;
+    padding-top:9px;
+    font-size:18px;
+}
+.izquierda{
+    float: left;
+}
+.derecha{
+    float: right;
+}
+#contenedor-info{
+    width: 100%;
+    background-color: white;
+    float: left;
+    margin-top:10px;
+}
+.estilo-fase{
+    width: 98%;
+    background-color: white;
+    color: black;
+    font-size: 20px;
+}
+#vs{
+    width: 100%;  
+    display: block; 
+    background-color: white;
+    margin: 10px 0px;
+    font-size: 20px;
+    
+}
+.equipo{
+    width: 100%;
+    color: rgb(00,63,37);
+    display: block;
+    
+}
+#equipoA{
+    margin-top: 10px;
+    background-color: white;
+    font-size: 20px;
+}
+#equipoB{
+    background-color: white;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+.contenedores-chicos{
+    width: 33%;
+    background-color: white;
+    color:black;
+    display: block;
+    float: left;
+    text-align: center;
+    margin-top:10px;
+    margin-bottom: 10px;
+}
+#condicion{
+    margin-left: 0.5%;
+    font-size: 20px;
+    
+}
+#horario{
+    margin-right: 0.5%;
+    font-size: 20px;
+    
+}
+#fecha{
+    font-size: 18px;
+    
+}
