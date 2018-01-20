@@ -22,64 +22,56 @@ app.set('view engine', 'handlebars')
 
 //Ruta al home
 app.get('/', function (req, res){
-    res.render('home',{ estilos: ['css/index.css','css/institucional2.css'], javascript:['js/home.js'],noticias:noticias,listaImgNovedades:listaImgNovedades,listaImgEventos:listaImgEventos,aside:true,ubicacion:true})
+    res.render('home',{ estilos: ['css/index.css','css/institucional2.css'],noticias:noticias,listaImgNovedades:listaImgNovedades,listaImgEventos:listaImgEventos,aside:true,ubicacion:true})
 })
-// app.post('/eventos', function (req, res) {
-//     res.json({eventos:eventos})
-// })
 //fechas
 app.post('/fechas', function (req, res) { 
     var deporte = proximosPartidos[req.body.deporte]
     var response= deporte[req.body.categoria]
     res.json(response)
 })
-// app.post('/fechas', function (req, res) { 
-//     var deporte = proximosPartidos[req.body.deporte]
-//     var response= deporte[req.body.categoria]
-//     res.json(response)
-// })
 //Ruta deportes
 app.get('/deportes', function (req, res) {
-    res.render('deportes',{ estilos: ['css/deportes.css','css/slideEventos.css'], javascript:['js/historia.js'],aside:true,eventos:true,listaImgNovedades:listaImgNovedades,listaImgEventos:listaImgEventos})
+    res.render('deportes',{ estilos: ['css/deportes.css','css/slideEventos.css'],aside:true,eventos:true,listaImgNovedades:listaImgNovedades,listaImgEventos:listaImgEventos})
 })
 //Ruta a alquiler del salon
 app.get('/alquiler-salon', function (req, res) {
-    res.render('alquiler-salon',{ estilos: ['css/alquiler-salon.css','css/slideEventos.css'], javascript:['js/alquileres.js'],aside:true,eventos:true,listaImgNovedades:listaImgNovedades,listaImgEventos:listaImgEventos})
+    res.render('alquiler-salon',{ estilos: ['css/alquiler-salon.css','css/slideEventos.css'],aside:true,eventos:true,listaImgNovedades:listaImgNovedades,listaImgEventos:listaImgEventos})
 })
 //Ruta a alquiler de cancha
 app.get('/alquiler-cancha', function (req, res) {
-    res.render('alquiler-cancha',{ estilos: ['css/alquiler-cancha.css','css/slideEventos.css'],javascript:['js/alquileres.js'],aside:true,eventos:true,listaImgNovedades:listaImgNovedades,listaImgEventos:listaImgEventos})
+    res.render('alquiler-cancha',{ estilos: ['css/alquiler-cancha.css','css/slideEventos.css'],aside:true,eventos:true,listaImgNovedades:listaImgNovedades,listaImgEventos:listaImgEventos})
 })
 //Ruta a comision directiva
 app.get('/comision-directiva', function (req, res) {
-    res.render('comision-directiva',{ estilos: ['css/comision-directiva.css','css/slideEventos.css'],javascript:['js/comisionDirectiva.js'],aside:true,eventos:true,listaImgNovedades:listaImgNovedades,listaImgEventos:listaImgEventos})
+    res.render('comision-directiva',{ estilos: ['css/comision-directiva.css','css/slideEventos.css'],aside:true,eventos:true,listaImgNovedades:listaImgNovedades,listaImgEventos:listaImgEventos})
 })
 //Ruta a aranceles
 app.get('/aranceles', function (req, res) {
-    res.render('aranceles',{ estilos: ['css/aranceles.css','css/slideEventos.css'],javascript:['js/aranceles.js'],aside:true,eventos:true,listaImgNovedades:listaImgNovedades,listaImgEventos:listaImgEventos})
+    res.render('aranceles',{ estilos: ['css/aranceles.css','css/slideEventos.css'],aside:true,eventos:true,listaImgNovedades:listaImgNovedades,listaImgEventos:listaImgEventos})
 })
 //Ruta a contacto
 app.get('/contacto', function (req, res) {
-    res.render('contacto',{ estilos: ['css/contacto.css','css/slideEventos.css'], javascript:['js/contacto.js'],aside:true,eventos:true,listaImgNovedades:listaImgNovedades,listaImgEventos:listaImgEventos})
+    res.render('contacto',{ estilos: ['css/contacto.css','css/slideEventos.css'],aside:true,eventos:true,listaImgNovedades:listaImgNovedades,listaImgEventos:listaImgEventos})
 })
 app.post('/contacto', function (req, res) {
-    res.render('contacto',{ estilos: ['css/contacto.css','css/slideEventos.css'], javascript:['js/contacto.js'],aside:true,eventos:true,listaImgNovedades:listaImgNovedades,listaImgEventos:listaImgEventos})
+    res.render('contacto',{ estilos: ['css/contacto.css','css/slideEventos.css'],aside:true,eventos:true,listaImgNovedades:listaImgNovedades,listaImgEventos:listaImgEventos})
 })
 //Ruta a eventos
 app.get('/eventos', function (req, res) {
-    res.render('eventos',{ estilos: ['css/eventos.css','css/slideEventos.css'],eventoscontenido:eventos,javascript:['js/eventos.js'],aside:true,eventos:true,listaImgNovedades:listaImgNovedades,listaImgEventos:listaImgEventos})
+    res.render('eventos',{ estilos: ['css/eventos.css','css/slideEventos.css'],eventoscontenido:eventos,aside:true,eventos:true,listaImgNovedades:listaImgNovedades,listaImgEventos:listaImgEventos})
 })
 //Ruta a historia
 app.get('/historia', function (req, res) {
-    res.render('historia',{ estilos: ['css/historia.css','css/slideEventos.css'],javascript:['js/historia.js'],aside:true,eventos:true,listaImgNovedades:listaImgNovedades,listaImgEventos:listaImgEventos})
+    res.render('historia',{ estilos: ['css/historia.css','css/slideEventos.css'],aside:true,eventos:true,listaImgNovedades:listaImgNovedades,listaImgEventos:listaImgEventos})
 })
 //Ruta a como llegar
 app.get('/como-llegar', function (req, res) {
-    res.render('como-llegar',{estilos:['css/ubicacion.css'],javascript:['js/ubicacion.js'],transportes:true})
+    res.render('como-llegar',{estilos:['css/ubicacion.css'],transportes:true})
 })
 //Ruta a institucional
 app.get('/institucional', function (req, res) {
-    res.render('institucional',{ estilos: ['css/institucional.css','css/slideEventos.css'],noticias:noticias,javascript:['js/institucional.js'],aside:true,eventos:true,listaImgNovedades:listaImgNovedades,listaImgEventos:listaImgEventos})
+    res.render('institucional',{ estilos: ['css/institucional.css','css/slideEventos.css'],noticias:noticias,aside:true,eventos:true,listaImgNovedades:listaImgNovedades,listaImgEventos:listaImgEventos})
 })
 //Ruta a portal de socio
 // ,javascript:['js/validarLogin.js']

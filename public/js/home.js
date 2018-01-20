@@ -1,19 +1,29 @@
-var indiceNovedadSlide=0
-var indiceEvento=0
-var stopEventos=false
-var stopNovedades=false
-
-const contenedoresImgEventos=document.querySelectorAll(".contenedor-evento")
+//Novedades texto
 const novedadesTexto=document.getElementById("novedades-texto")
 var novedades=["Bienvenido al sitio oficial del Club Deportivo Defensores de Hurlingham","Esta es una novedad","Esta es una novedad diferente a la anteriror","Esta es una novedad totalmente diferente a las dos anteriores"]
-const contenedoresImgNovedades=document.querySelectorAll('.contenedor-img-novedades');  
-
-var cantidadContenedoresNovedades=contenedoresImgNovedades.length
+//Alquileres
+var slideIndiceContenedoresAlquileres = 1;
+//Eventos slide
+const contenedoresImgEventos=document.querySelectorAll(".contenedor-evento")
 var cantidadContenedoresEventos=contenedoresImgEventos.length
+var indiceEvento=0
+var stopEventos=false
+//Novedades slide
+const contenedoresImgNovedades=document.querySelectorAll('.contenedor-img-novedades'); 
+var cantidadContenedoresNovedades=contenedoresImgNovedades.length
+var indiceNovedadSlide=0
+var stopNovedades=false
+
+//Contacto
+const form=document.getElementById("formulario-contacto")
+const inputNombre=document.getElementById("nombre")
+const inputTelefono=document.getElementById("telefono")
+const inputEmail=document.getElementById("email")
+const inputAsunto=document.getElementById("asunto")
+const inputMensaje=document.getElementById("mensaje")
 
 //slide Eventos
 const pasarEvento=function(n){
-    stopEventos=true;
     indiceEvento=indiceEvento+n
     if(indiceEvento>contenedoresImgEventos.length-1){
         indiceEvento=0
@@ -35,7 +45,6 @@ const cambiarEvento=function(pos){
     }
     cont=0
 }
-
 
 
 //slide Novedades
@@ -64,12 +73,29 @@ const cambiarNovedad=function(pos){
     cont=0
 }
 
+//slide Alquileres
+function pasarDiv(n) {
+    showDivs(slideIndiceContenedoresAlquileres += n);
+}
+
+function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("slide");
+    if (n > x.length) {slideIndiceContenedoresAlquileres = 1} 
+    if (n < 1) {slideIndiceContenedoresAlquileres = x.length} ;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none"; 
+    }
+    x[slideIndiceContenedoresAlquileres-1].style.display = "block"; 
+}
+
 
 
 window.onload=function(){
-    cambiarEvento(0)
-    cambiarNovedad(0)
 
+    if(location.pathname=="/alquiler-salon" || location.pathname=="/alquiler-cancha"){
+        showDivs(slideIndiceContenedoresAlquileres);
+    }
     var indiceLetra=0
     var indiceNovedad=0
     var nuevoTexto=""
@@ -93,7 +119,9 @@ window.onload=function(){
                 }
             }
         }, 150)
-
+    if(location.pathname!=="/como-llegar"){    
+        cambiarEvento(0)
+        cambiarNovedad(0)
         const intervalIdEventosSlide= setInterval(function(){
             if(!stopEventos){
                 indiceEvento=indiceEvento+1
@@ -113,5 +141,38 @@ window.onload=function(){
                 cambiarNovedad(indiceNovedadSlide)
             }
         },4000)
-        
+    }
+
+    if(location.pathname==="/contacto"){        
+        form.onsubmit=function(evento){
+            // evento.preventDefault()
+            var xmlhttp = new XMLHttpRequest();
+            
+                // xmlhttp.onreadystatechange = function() {
+                //         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                //             const respuesta = JSON.parse(xmlhttp.responseText)
+                //         }
+                // };
+                
+                // Armamos los valores que queremos enviar
+                var nombre=inputNombre.value
+                var telefono=inputTelefono.value
+                var email=inputEmail.value
+                var asunto=inputAsunto.value
+                var mensaje=inputMensaje.value
+                const params = "nombre="+nombre+"&telefono="+telefono+"&email="+email+"&asunto="+asunto+"&mensaje="+mensaje
+                
+                
+            
+                // Abrimos el request
+                xmlhttp.open("POST", "/mensaje", true);
+                // Establecemos encabezado
+                xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            
+                // Enviamos el request con los parámetros que necesitamos enviar
+                xmlhttp.send(params);
+        }
+    }
 }
+   
+
